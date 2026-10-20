@@ -1,5 +1,6 @@
 
 # REDCap Clinical Trial Data Quality Pipeline
+![REDCap Pipeline Tests](https://github.com/oyetzmedic/redcap-trial-data-pipeline/actions/workflows/tests.yml/badge.svg)
 
 A Python-based clinical trial data quality workflow integrating
 REDCap API extraction, automated validation, site reconciliation,
