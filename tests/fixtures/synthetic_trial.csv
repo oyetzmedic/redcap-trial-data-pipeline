@@ -1,0 +1,9 @@
+﻿record_id,redcap_event_name,redcap_repeat_instrument,redcap_repeat_instance,redcap_data_access_group,visit_date,sbp,ae_serious,ae_serious_details,withdrawn,withdrawal_reason
+0001,baseline_visit_arm_1,,,manchester,2026-01-01,120,0,,0,
+0001,week_4_followup_arm_1,,,manchester,,118,0,,0,
+0001,week_12_followup_arm_1,,,manchester,2026-03-26,122,0,,0,
+0002,baseline_visit_arm_1,,,liverpool,2026-01-01,127,0,,0,
+0002,week_4_followup_arm_1,,,liverpool,2026-01-29,135,0,,1,2
+0003,baseline_visit_arm_1,,,manchester,2026-01-01,130,0,,0,
+0003,week_4_followup_arm_1,,,manchester,2026-01-29,260,0,,0,
+0001,baseline_visit_arm_1,adverse_events,1,manchester,,,1,,0,

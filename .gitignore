@@ -1,0 +1,23 @@
+# Private REDCap project backups
+backups/
+exports/
+runs/
+
+# API credentials
+.env
+.env.*
+!.env.example
+
+# Python environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local editor settings
+.vscode/
+# Local REDCap data exports
+exports/
