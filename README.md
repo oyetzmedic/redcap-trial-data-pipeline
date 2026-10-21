@@ -131,6 +131,49 @@ REDCAP_API_TOKEN=your_private_api_token
 
 Do not commit `.env` or share API tokens.
 
+
+## One-Command Synthetic Demonstration
+
+The complete data quality workflow can be reproduced without
+REDCap credentials or access to a clinical trial database.
+
+After installing the project dependencies, run:
+
+```powershell
+python run_demo.py
+```
+
+The script automatically:
+
+1. Loads an independent synthetic clinical trial fixture.
+2. Creates an isolated execution directory.
+3. Validates visit completeness and clinical data quality.
+4. Reconciles findings with withdrawal information.
+5. Generates an HTML data quality dashboard.
+6. Executes five automated tests.
+
+### Expected Demonstration Results
+
+| Measurement | Expected result |
+|---|---:|
+| Synthetic participants | 3 |
+| Trial records | 8 |
+| Data quality findings | 5 |
+| Site investigation flags | 4 |
+| Withdrawal/protocol review flags | 1 |
+| Automated tests | 5 passed |
+
+The resulting dashboard is saved to:
+
+`runs/demo_<timestamp>/output/quality_dashboard.html`
+
+Each demonstration creates a new execution directory.
+The `runs/` directory is excluded from Git.
+
+All demonstration records are fictional and synthetic.
+No REDCap connection is required.
+
+
 ## Run Standalone Tests
 
 The repository includes a small synthetic fixture.
