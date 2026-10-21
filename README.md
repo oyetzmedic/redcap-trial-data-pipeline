@@ -9,6 +9,17 @@ HTML reporting, isolated execution and SHA-256 integrity checks.
 The project uses a synthetic two-site longitudinal clinical trial
 to demonstrate reproducible clinical data management processes.
 
+## Dashboard Preview
+
+The dashboard below was generated entirely from fictional,
+synthetic clinical trial records. No real patient data is shown.
+
+![Synthetic REDCap Clinical Data Quality Dashboard](docs/images/dashboard-demo.png)
+
+**Demonstration results:** 3 synthetic participants,
+5 quality findings, 4 site investigation flags and
+1 withdrawal/protocol review flag.
+
 ## Project Overview
 
 Clinical trial data management requires accurate records,
