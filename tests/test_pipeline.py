@@ -39,8 +39,18 @@ class TestTrialPipeline(unittest.TestCase):
             output_dir = Path(workspace.name)
 
             env = os.environ.copy()
+
+            for variable in (
+                "OPENBLAS_NUM_THREADS",
+                "OMP_NUM_THREADS",
+                "MKL_NUM_THREADS",
+                "NUMEXPR_NUM_THREADS",
+            ):
+                env[variable] = "1"
+
             env["TRIAL_DATA_FILE"] = str(dataset)
             env["TRIAL_OUTPUT_DIR"] = str(output_dir)
+
 
             for script in (
                 "validate_trial_data.py",

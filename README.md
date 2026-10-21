@@ -150,7 +150,7 @@ The script automatically:
 3. Validates visit completeness and clinical data quality.
 4. Reconciles findings with withdrawal information.
 5. Generates an HTML data quality dashboard.
-6. Executes five automated tests.
+6. Executes 23 automated tests covering pipeline consistency and individual validation rules.
 
 ### Expected Demonstration Results
 
@@ -161,7 +161,7 @@ The script automatically:
 | Data quality findings | 5 |
 | Site investigation flags | 4 |
 | Withdrawal/protocol review flags | 1 |
-| Automated tests | 5 passed |
+| Automated tests | 23 passed |
 
 The resulting dashboard is saved to:
 
@@ -183,6 +183,30 @@ Run:
 ```powershell
 python -m unittest discover -s tests -v
 ```
+
+### Expanded Validation Test Coverage
+
+The automated test suite includes 23 tests:
+
+- 5 integration and pipeline consistency tests.
+- 18 independent validation-rule tests.
+
+The validation tests use temporary synthetic datasets
+containing both valid and deliberately invalid records.
+
+Scenarios include:
+
+- Missing baseline, Week 4 and Week 12 visits.
+- Missing visit dates.
+- Systolic blood pressure below 80 or above 240 mmHg.
+- Non-numeric blood pressure values and valid boundaries.
+- Missing serious adverse event documentation.
+- Valid and duplicate repeating instrument instances.
+- Conflicting REDCap Data Access Groups.
+- Missing required dataset columns.
+
+All tests run without REDCap credentials.
+
 
 These tests require no REDCap connection or API credentials.
 
